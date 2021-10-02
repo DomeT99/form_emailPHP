@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Jquery -->
-    <script src="../email/Jquery/jquery-3.6.0.min.js"></script>
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../email/Bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="../email/Bootstrap/css/bootstrap.min.css">
@@ -21,7 +18,7 @@
 
     <?php
 
-   
+
     $emailTo = $_POST['emailTo'];
     $object = $_POST['object'];
     $bodyMsg = $_POST['body'];
@@ -38,7 +35,7 @@
     }
 
     ?>
-    
+
 
 </head>
 
