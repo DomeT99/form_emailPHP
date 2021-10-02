@@ -1,0 +1,64 @@
+$background-color: rgb(255, 184, 255);
+$font-color: rgb(17, 17, 17);
+$btn-color: purple;
+$font-family: "Roboto";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+    background-color: $background-color;
+    .container_tot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .lbl_com {
+            font: {
+                size: 14px;
+                family: $font-family;
+            }
+            color: $font-color;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .txt_email {
+            margin-top: 20px;
+            width: 250px;
+            border: 1px solid;
+        }
+        .body_email {
+            width: 280px;
+            resize: none;
+            height: 180px;
+            border: 1px solid;
+        }
+        .txt_body {
+            margin-bottom: 20px;
+        }
+
+        .btn_send {
+            line-height: 30px;
+            border: 1px solid;
+
+            font: {
+                weight: bold;
+                family: "Roboto";
+            }
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            margin: 0 auto;
+            color: $font-color;
+            padding: 7px;
+            display: block;
+            background-image: linear-gradient(to left, transparent, transparent 50%, $btn-color 50%, $btn-color);
+            background-position: 100% 0;
+            background-size: 200% 100%;
+            margin-top: 20px;
+            transition: all 0.25s ease-in;
+        }
+
+        .btn_send:hover {
+            background-position: 0 0;
+            color: $font-color;
+        }
+    }
+}
