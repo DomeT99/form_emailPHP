@@ -66,4 +66,10 @@ body .container_tot .btn_send:hover {
   background-position: 0 0;
   color: #111111;
 }
+
+.popup_done {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+}
 /*# sourceMappingURL=index.css.map */

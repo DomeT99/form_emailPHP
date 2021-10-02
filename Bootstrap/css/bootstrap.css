@@ -4650,6 +4650,7 @@ textarea.form-control-lg {
 .alert {
   position: relative;
   padding: 1rem 1rem;
+  top: 200px;
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -4693,9 +4694,9 @@ textarea.form-control-lg {
 }
 
 .alert-success {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border-color: #badbcc;
+  color: white;
+  background-color: #a70399;
+  border-color: #53045a;
 }
 .alert-success .alert-link {
   color: #0c4128;

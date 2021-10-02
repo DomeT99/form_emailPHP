@@ -23,19 +23,20 @@
     $object = $_POST['object'];
     $bodyMsg = $_POST['body'];
     $header = "From : Tufast";
-
-
+    
     if (mail($emailTo, $object, $bodyMsg, $header)) {
 
-        echo "Mail send!";
+        header('Location: http://127.0.0.1:5500/pageTrue.html');
+        
     } else {
 
-
-        echo "Error";
+       header('HTTP/1.1 404 Not Found');
+        
     }
 
-    ?>
 
+    ?>
+    
 
 </head>
 
@@ -55,6 +56,7 @@
                 <input class="btn_send" type="submit" value="Send">
             </div>
         </form>
+
     </div>
 </body>
 
