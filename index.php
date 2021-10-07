@@ -23,20 +23,27 @@
     $object = $_POST['object'];
     $bodyMsg = $_POST['body'];
     $header = "From : Tufast";
-    
-    if (mail($emailTo, $object, $bodyMsg, $header)) {
 
-        header('Location: http://127.0.0.1:5500/pageTrue.html');
-        
+    /*    if (!filter_var($emailTo, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('CIAO')</script>";
     } else {
 
-       header('HTTP/1.1 404 Not Found');
-        
+    } */
+
+    if (mail($emailTo, $object, $bodyMsg, $header)) {
+
+
+        header('Location: http://127.0.0.1:5500/pageTrue.html');
+    } else {
+
+        header('HTTP/1.1 404 Not Found');
     }
 
 
+
     ?>
-    
+
+
 
 </head>
 
@@ -53,11 +60,25 @@
                 <span class="lbl_com txt_body">Enter the body of the email</span>
                 <textarea class="body_email" name="body" id="body_email"></textarea>
 
-                <input class="btn_send" type="submit" value="Send">
+                <input onclick="controllo()" class="btn_send" type="submit" value="Send">
             </div>
         </form>
 
     </div>
 </body>
+<script>
+    function controllo() {
+
+        let mail = document.getElementById('emailTo').value;
+        let object = document.getElementById('object').value;
+        let msg = document.getElementById('body_email').value;
+
+        if (mail == "" || mail == "undefined" || object == "" || object == "undefined" || msg == "" || msg == "undefined") {
+
+            alert('Inserire le credenziali');
+        }
+
+    }
+</script>
 
 </html>
