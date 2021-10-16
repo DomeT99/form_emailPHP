@@ -13,27 +13,26 @@
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="../email/Style/index.css">
     <title>E-mail form!</title>
-
-
-
     <?php
-
-
     $emailTo = $_POST['emailTo'];
     $object = $_POST['object'];
     $bodyMsg = $_POST['body'];
     $header = "From : Tufast";
 
-    /*    if (!filter_var($emailTo, FILTER_VALIDATE_EMAIL)) {
-        echo "<script>alert('CIAO')</script>";
-    } else {
-
-    } */
-
     if (mail($emailTo, $object, $bodyMsg, $header)) {
-
-
-        header('Location: http://127.0.0.1:5500/pageTrue.html');
+        
+    ?>
+        <div class="container-sm">
+            <div class="row-cols-sm-6">
+                <div class="alert alert-success popup_done" role="alert"  style="border: 1px solid violet; background-color:violet; color:black">
+                    <h4 class="alert-heading">Success!</h4>
+                    <p>The email was sent successfully!</p>
+                    <hr>
+                    <p class="mb-0">Check your inbox to be sure.</p>
+                </div>
+            </div>
+        </div>
+    <?php
     } else {
 
         header('HTTP/1.1 404 Not Found');
